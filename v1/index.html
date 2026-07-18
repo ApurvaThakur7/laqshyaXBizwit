@@ -185,6 +185,8 @@ header.nav.shrink{padding:12px 28px;background:rgba(0,0,0,.82);backdrop-filter:b
 .rcard .deliv li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:2px;background:var(--red)}
 .rcard .impl{margin-top:auto;padding:14px 26px;border-top:1px solid var(--line);font-family:'Archivo';font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .rcard .impl b{color:var(--red);font-weight:700}
+.rcard .inv{padding:12px 26px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:'Archivo';font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.rcard .inv b{color:#fff;font-size:13.5px;letter-spacing:.02em;white-space:nowrap}
 
 /* table */
 .tbl-wrap{overflow-x:auto;margin-top:40px;border:1px solid var(--line);border-radius:16px}
@@ -196,6 +198,10 @@ table.arch td:nth-child(2){color:#fff}
 table.arch tr:hover td{background:var(--surface)}
 .tg{font-family:'Archivo';font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:100px;border:1px solid var(--line);color:var(--muted)}
 .tg.code{border-color:var(--red);color:var(--red)}
+table.arch td.pr{color:#fff;white-space:nowrap}
+table.arch tr.total td{background:var(--surface-2);color:#fff;font-weight:700}
+table.arch tr.total:hover td{background:var(--surface-2)}
+table.arch tr.total td:last-child{font-family:'Archivo';font-weight:900;color:var(--red);white-space:nowrap}
 
 /* proof */
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
@@ -480,6 +486,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">A centralised, AI-powered knowledge base with natural-language search and role-based access. One source of truth.</p></div>
         <ul class="deliv"><li>Central AI repository</li><li>Searchable library</li><li>Retrieval assistant</li><li>Role-based access</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d1">
         <div class="rt"><span class="code">R2</span><h3>BD &amp; Servicing Assistant</h3>
@@ -487,6 +494,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">An AI assistant across the client lifecycle, generating briefings, first drafts and proposal frameworks.</p></div>
         <ul class="deliv"><li>BD &amp; servicing assistant</li><li>Meeting prep</li><li>Company research</li><li>Proposal &amp; deck drafts</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d2">
         <div class="rt"><span class="code">R3</span><h3>AI Guardrails Framework</h3>
@@ -494,6 +502,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">Review and approval workflows before any AI output ships externally. Responsible adoption, maintained standards.</p></div>
         <ul class="deliv"><li>Governance framework</li><li>Approval workflows</li><li>Output validation</li><li>QA workflows</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d3">
         <div class="rt"><span class="code">R4</span><h3>AI Enablement Programme</h3>
@@ -501,6 +510,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">An org-wide enablement programme, department use cases and best practices for responsible AI use.</p></div>
         <ul class="deliv"><li>Adoption strategy</li><li>Org-wide workshops</li><li>Department training</li><li>Ongoing support</li></ul>
         <div class="impl">Consulting &amp; <b>Change Mgmt</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
     </div>
   </div>
@@ -518,6 +528,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">A centralised backbone for Solutions and Assets, fast inventory discovery and AI-assisted planning. Designed to extend your existing SHARP planner.</p></div>
         <ul class="deliv"><li>Central inventory backbone</li><li>Unified repository</li><li>AI-assisted planning</li><li>Inventory search</li></ul>
         <div class="impl">Hybrid: <b>Code + Low-Code</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d1">
         <div class="rt"><span class="code">R6</span><h3>Data-Enriched Proposals</h3>
@@ -525,6 +536,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">AI-assisted generation with contextual data enrichment, producing structured drafts teams refine before submission.</p></div>
         <ul class="deliv"><li>AI proposal generation</li><li>Drafting assistant</li><li>Data enrichment</li><li>Structured templates</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d2">
         <div class="rt"><span class="code">R7</span><h3>Proof of Play &amp; Portal</h3>
@@ -532,6 +544,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">A custom client-facing portal with real-time visibility and centralised proof of play. Separate access for clients, servicing and field.</p></div>
         <ul class="deliv"><li>Client portal (web + mobile)</li><li>Campaign dashboard</li><li>Proof of play mgmt</li><li>Role-based access</li></ul>
         <div class="impl"><b>Code-Based Build</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d3">
         <div class="rt"><span class="code">R8</span><h3>Documentation &amp; Invoicing</h3>
@@ -539,6 +552,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">Automated workflows that assemble documentation and prepare invoices in a structured flow.</p></div>
         <ul class="deliv"><li>Documentation workflow</li><li>Compilation automation</li><li>Invoice prep</li><li>Process standardisation</li></ul>
         <div class="impl">Hybrid: <b>Code + Low-Code</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
     </div>
     <div class="note reveal">Only the <b>Proof of Play &amp; Client Portal</b> genuinely needs a code-based build, since large clients touch it directly. The rest ships cost-efficiently through low-code AI automation.</div>
@@ -557,6 +571,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">An AI Creative Suite for early-stage development, accelerating concepts while keeping human review and final approval.</p></div>
         <ul class="deliv"><li>AI creative suite</li><li>Conceptualiser</li><li>Copywriting assist</li><li>Banner concepts</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d1">
         <div class="rt"><span class="code">R10</span><h3>Reports &amp; Competitor Intel</h3>
@@ -564,6 +579,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">An automated system that organises and delivers business intelligence to internal teams and clients, keeping them engaged.</p></div>
         <ul class="deliv"><li>Automated distribution</li><li>Competitor intel workflows</li><li>Industry updates</li><li>Knowledge sharing</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d2">
         <div class="rt"><span class="code">R11</span><h3>AI-Assisted Lead Generation</h3>
@@ -571,6 +587,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">A system supporting prospecting, qualification, contextual outreach and follow-up. Human decision-making stays central.</p></div>
         <ul class="deliv"><li>Lead-gen workflow</li><li>Company research</li><li>Outreach prep</li><li>Follow-up support</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
     </div>
   </div>
@@ -588,6 +605,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">Dedicated modules per vertical after the core system, each connected to the common ecosystem to avoid fragmentation.</p></div>
         <ul class="deliv"><li>Vertical modules</li><li>Unit workflow automation</li><li>Ecosystem connectivity</li></ul>
         <div class="impl">Hybrid: <b>Code + Low-Code</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d1">
         <div class="rt"><span class="code">R13</span><h3>Finance MIS <span style="font-family:Inter;text-transform:none;color:var(--muted-2);font-size:12px;font-weight:400">· Future</span></h3>
@@ -595,6 +613,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">Evaluate and design finance workflow, reporting and MIS automation in a later phase.</p></div>
         <ul class="deliv"><li>Finance automation roadmap</li><li>Workflow assessment</li></ul>
         <div class="impl"><b>Code-Based Build</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d2">
         <div class="rt"><span class="code">R14</span><h3>HR Automation <span style="font-family:Inter;text-transform:none;color:var(--muted-2);font-size:12px;font-weight:400">· Future</span></h3>
@@ -602,6 +621,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">Assess HR processes and identify AI-assisted automation as part of enterprise-wide expansion.</p></div>
         <ul class="deliv"><li>HR automation assessment</li><li>Future HR roadmap</li></ul>
         <div class="impl"><b>Code-Based Build</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
     </div>
   </div>
@@ -614,22 +634,23 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     <h2 class="h-sec reveal">Complete architecture</h2>
     <div class="tbl-wrap reveal">
       <table class="arch">
-        <thead><tr><th>Req.</th><th>Solution</th><th>Approach</th><th>Pillar</th></tr></thead>
+        <thead><tr><th>Req.</th><th>Solution</th><th>Approach</th><th>Pillar</th><th>Investment</th></tr></thead>
         <tbody>
-          <tr><td>R1</td><td>Institutional Knowledge Base</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td></tr>
-          <tr><td>R2</td><td>BD &amp; Servicing Assistant</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td></tr>
-          <tr><td>R3</td><td>AI Guardrails Framework</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td></tr>
-          <tr><td>R4</td><td>AI Enablement Programme</td><td><span class="tg">Consulting</span></td><td>Knowledge</td></tr>
-          <tr><td>R5</td><td>Media Inventory Backbone</td><td><span class="tg">Hybrid</span></td><td>Operations</td></tr>
-          <tr><td>R6</td><td>Data-Enriched Proposals</td><td><span class="tg">Low-Code</span></td><td>Operations</td></tr>
-          <tr><td>R7</td><td>Proof of Play &amp; Client Portal</td><td><span class="tg code">Code-Based</span></td><td>Operations</td></tr>
-          <tr><td>R8</td><td>Documentation &amp; Invoicing</td><td><span class="tg">Hybrid</span></td><td>Operations</td></tr>
-          <tr><td>R9</td><td>AI Creative Suite &amp; Conceptualiser</td><td><span class="tg">Low-Code</span></td><td>Growth</td></tr>
-          <tr><td>R10</td><td>Reports &amp; Competitor Intel</td><td><span class="tg">Low-Code</span></td><td>Growth</td></tr>
-          <tr><td>R11</td><td>AI-Assisted Lead Generation</td><td><span class="tg">Low-Code</span></td><td>Growth</td></tr>
-          <tr><td>R12</td><td>Vertical-Specific AI Modules</td><td><span class="tg">Hybrid</span></td><td>Enterprise</td></tr>
-          <tr><td>R13</td><td>Finance MIS (Future)</td><td><span class="tg code">Code-Based</span></td><td>Enterprise</td></tr>
-          <tr><td>R14</td><td>HR Automation (Future)</td><td><span class="tg code">Code-Based</span></td><td>Enterprise</td></tr>
+          <tr><td>R1</td><td>Institutional Knowledge Base</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R2</td><td>BD &amp; Servicing Assistant</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R3</td><td>AI Guardrails Framework</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R4</td><td>AI Enablement Programme</td><td><span class="tg">Consulting</span></td><td>Knowledge</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R5</td><td>Media Inventory Backbone</td><td><span class="tg">Hybrid</span></td><td>Operations</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R6</td><td>Data-Enriched Proposals</td><td><span class="tg">Low-Code</span></td><td>Operations</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R7</td><td>Proof of Play &amp; Client Portal</td><td><span class="tg code">Code-Based</span></td><td>Operations</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R8</td><td>Documentation &amp; Invoicing</td><td><span class="tg">Hybrid</span></td><td>Operations</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R9</td><td>AI Creative Suite &amp; Conceptualiser</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R10</td><td>Reports &amp; Competitor Intel</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R11</td><td>AI-Assisted Lead Generation</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R12</td><td>Vertical-Specific AI Modules</td><td><span class="tg">Hybrid</span></td><td>Enterprise</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R13</td><td>Finance MIS (Future)</td><td><span class="tg code">Code-Based</span></td><td>Enterprise</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R14</td><td>HR Automation (Future)</td><td><span class="tg code">Code-Based</span></td><td>Enterprise</td><td class="pr">₹2,00,000</td></tr>
+          <tr class="total"><td></td><td>Total · 14 modules</td><td></td><td></td><td>₹28,00,000</td></tr>
         </tbody>
       </table>
     </div>
