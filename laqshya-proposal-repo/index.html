@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal Versions · Laqshya × Bizwit AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Jost:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--surface:#0F0F10;--line:#242427;--white:#fff;--muted:#9A9AA0;--muted2:#6E6E75;--red:#ED1C24;--red-hi:#FF2D35}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+.wrap{max-width:860px;margin:0 auto;padding:64px 24px 80px}
+h1,h2,h3{font-family:'Archivo';text-transform:uppercase;letter-spacing:-.01em}
+.brand{display:flex;flex-direction:column;gap:5px;margin-bottom:48px}
+.brand .lw{font-family:'Jost';font-weight:500;font-size:22px;letter-spacing:.2em;position:relative;padding-bottom:6px;width:max-content}
+.brand .lw::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--red)}
+.brand .lw .q{position:relative}
+.brand .lw .q::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:5px;height:5px;border-radius:50%;background:var(--red)}
+.brand .ls{font-family:'Jost';font-size:9px;letter-spacing:.4em;color:var(--muted)}
+.label{font-family:'Archivo';font-size:12px;font-weight:700;letter-spacing:.22em;color:var(--red);display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.label::before{content:"";width:26px;height:2px;background:var(--red)}
+h1{font-size:clamp(30px,6vw,48px);font-weight:900;margin-bottom:16px}
+.intro{color:var(--muted);font-size:16px;max-width:60ch;margin-bottom:14px}
+.hint{color:var(--muted2);font-size:13.5px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:0 10px 10px 0;padding:14px 18px;margin:26px 0 42px}
+.hint b{color:#fff}
+.vcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;margin-bottom:18px;transition:.3s cubic-bezier(.16,1,.3,1)}
+.vcard:hover{border-color:var(--red);transform:translateY(-3px)}
+.vcard.soon{opacity:.5}
+.vtop{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.vtag{display:flex;align-items:center;gap:12px}
+.vnum{font-family:'Archivo';font-weight:900;font-size:26px;color:var(--red)}
+.vmeta{font-family:'Archivo';font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.status{font-family:'Archivo';font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;border:1px solid var(--line);color:var(--muted)}
+.status.review{border-color:var(--red);color:var(--red)}
+.status.latest{background:var(--red);border-color:var(--red);color:#fff}
+.vcard ul{list-style:none;margin:14px 0 20px}
+.vcard ul li{font-size:14px;color:#c9c9cd;padding:5px 0 5px 20px;position:relative}
+.vcard ul li::before{content:"";position:absolute;left:0;top:12px;width:8px;height:2px;background:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Archivo';font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:13px 24px;border-radius:100px;background:var(--red);color:#fff;transition:.25s}
+.btn:hover{background:var(--red-hi)}
+a{text-decoration:none;color:inherit}
+footer{color:var(--muted2);font-size:13px;margin-top:40px;border-top:1px solid var(--line);padding-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><span class="lw">LA<span class="q">Q</span>SHYA</span><span class="ls">× BIZWIT AI</span></div>
+  <div class="label">Internal review</div>
+  <h1>Proposal versions</h1>
+  <p class="intro">Every version of the AI Operating System proposal for Laqshya Media Group lives here. Open the latest, review it, and send feedback. New versions are added as we iterate.</p>
+  <div class="hint"><b>Leaving feedback?</b> Note the <b>version number</b> and the <b>section name</b> (e.g. "v1 · Proof section, second card") so changes are easy to track. Feedback can go in our shared thread, or drop comments directly on the live page using the tool linked below.</div>
+
+  <div class="vcard">
+    <div class="vtop">
+      <div class="vtag"><span class="vnum">v1.0</span><span class="vmeta">18 Jul 2026 · First draft</span></div>
+      <span class="status latest">Latest</span>
+    </div>
+    <ul>
+      <li>Full rebuild in Laqshya's brand: black / white / red, target-dot motif, bold Archivo type</li>
+      <li>All 14 modules across 4 pillars, architecture table, proof section, delivery plan, commercials</li>
+      <li>Scroll motion, count-up stats, client marquee, SHARP-planner reference</li>
+    </ul>
+    <a href="v1/index.html" class="btn">Open v1.0 →</a>
+  </div>
+
+  <div class="vcard soon">
+    <div class="vtop">
+      <div class="vtag"><span class="vnum">v2.0</span><span class="vmeta">Pending team feedback</span></div>
+      <span class="status">Planned</span>
+    </div>
+    <ul><li>Will incorporate the first round of team feedback</li></ul>
+  </div>
+
+  <footer>Confidential · Prepared by Bizwit AI · Laqshya Media Group · 2026</footer>
+</div>
+</body>
+</html>
