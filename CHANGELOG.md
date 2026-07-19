@@ -12,6 +12,10 @@ Track every version and what changed. Add a new block at the top for each versio
 - **Fixed pricing removed.** The "Investment" column is now **Relative Effort**, with bands by approach: Low-Code = ₹, Consulting = ₹, Hybrid = ₹₹, Code-Based = ₹₹₹. Same bands on all 14 requirement card footers; the ₹28,00,000 total row is gone.
 - **Readability fix in the red challenges card.** The global `.red` text-colour utility was bleeding into the "Operations & Execution" column, turning its bold item titles red-on-red (invisible) and making rows look misaligned. Titles are now white and the arrows align with them.
 - **Gradient accents (minimal).** The CTA's purple→pink→orange gradient now also appears on the scroll progress bar, the executive-summary stat numbers, and the pillar letters on hover.
+- **Brand lockup redesigned.** "× BIZWIT AI" is now a 12px bold white sub-mark with a red ×, balanced under LAQSHYA in nav and footer.
+- **Gradient extended.** Also on the hero word "System", section-heading accent words, hero stat numbers and approach mini-stats.
+- **WhatsApp CTA.** "Book the discovery workshop" (mailto) replaced with "Let's begin →" opening Priyank's WhatsApp chat directly (+91 73764 05488), with the number linked below the button.
+- **Self-serve pricing block.** All ₹ effort bands and the column/card label now come from one clearly-marked `PRICING` block at the top of the page script — editable in one place without touching the rest of the file.
 
 **Planned next (v4):**
 - Proof-of-work gallery — clicking a Proof card opens its screenshots / recordings in a lightbox (assets pending).

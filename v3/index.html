@@ -49,7 +49,8 @@ header.nav.shrink{padding:12px 28px;background:rgba(0,0,0,.82);backdrop-filter:b
 .brand .lw::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--red)}
 .brand .lw .q{position:relative}
 .brand .lw .q::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:5px;height:5px;border-radius:50%;background:var(--red)}
-.brand .ls{font-family:'Jost';font-size:8.5px;letter-spacing:.42em;color:var(--muted);padding-left:2px}
+.brand .ls{font-family:'Jost';font-size:12px;font-weight:700;letter-spacing:.3em;color:#fff;padding-left:2px;text-transform:uppercase}
+.brand .ls .xr{color:var(--red);font-weight:600;margin-right:1px}
 .navpill{display:flex;align-items:center;gap:6px;background:rgba(18,18,20,.72);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:100px;padding:8px 8px 8px 26px}
 .navpill a{font-family:'Archivo';font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:8px 14px;border-radius:100px;transition:color .25s}
 .navpill a:hover,.navpill a.active{color:#fff}
@@ -199,6 +200,7 @@ table.arch td:nth-child(2){color:#fff}
 table.arch tr:hover td{background:var(--surface)}
 .tg{font-family:'Archivo';font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:100px;border:1px solid var(--line);color:var(--muted)}
 .tg.code{border-color:var(--red);color:var(--red)}
+h1 .red,.h-sec .red,.stat .n,.appr .mini .n{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 table.arch td.pr{color:#fff;white-space:nowrap}
 table.arch tr.total td{background:var(--surface-2);color:#fff;font-weight:700}
 table.arch tr.total:hover td{background:var(--surface-2)}
@@ -314,7 +316,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 <header class="nav" id="nav">
   <a href="#top" class="brand">
     <span class="lw">LA<span class="q">Q</span>SHYA</span>
-    <span class="ls">× BIZWIT AI</span>
+    <span class="ls"><span class="xr">×</span> BIZWIT AI</span>
   </a>
   <nav class="navpill" id="navpill">
     <a href="#overview">Overview</a>
@@ -772,7 +774,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
       <div class="in">
         <h2>From proposal<br>to operating system</h2>
         <p>Laqshya has the ambition, scale and depth to become one of the first media groups in India with a fully operational enterprise AI Operating System. Bizwit AI is ready to make that real.</p>
-        <a href="mailto:info@reqore.com" class="btn btn-primary" style="background:#000">Book the discovery workshop →</a>
+        <a href="https://wa.me/917376405488?text=Hi%20Priyank%2C%20we%27ve%20reviewed%20the%20Laqshya%20x%20Bizwit%20AI%20proposal%20and%20would%20like%20to%20begin." target="_blank" rel="noopener" class="btn btn-primary" style="background:#000">Let's begin →</a>
+        <a href="https://wa.me/917376405488" target="_blank" rel="noopener" style="display:block;margin-top:16px;font-size:13.5px;color:rgba(255,255,255,.9);text-transform:none">WhatsApp · +91 73764 05488</a>
         <div class="steps">
           <div class="step"><div class="sn">STEP 01</div><h4>Discovery &amp; Validation</h4><p>Sessions with stakeholders to validate workflows and confirm priorities.</p></div>
           <div class="step"><div class="sn">STEP 02</div><h4>Solution Architecture</h4><p>A detailed architecture covering design, integrations and sequencing.</p></div>
@@ -789,13 +792,44 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
   <div class="wrap foot">
     <div class="brand">
       <span class="lw">LA<span class="q">Q</span>SHYA</span>
-      <span class="ls">× BIZWIT AI</span>
+      <span class="ls"><span class="xr">×</span> BIZWIT AI</span>
     </div>
     <div class="r"><b>AI OPERATING SYSTEM PROPOSAL</b><br>Confidential · Prepared by Bizwit AI · v3.0 · 2026</div>
   </div>
 </footer>
 
 <script>
+/* ══════════════════════════════════════════════════════════════
+   PRICING — EDIT HERE (no other part of the file needs touching)
+   Replace any value with a real amount, e.g.  R7:"₹5,00,000"
+   LABEL is the heading shown on the table column and every card,
+   e.g. change it to "Investment" when real amounts go in.
+   The page fills these in everywhere automatically.
+   ══════════════════════════════════════════════════════════════ */
+const PRICING={
+  LABEL:"Relative Effort",
+  R1:"₹", R2:"₹", R3:"₹", R4:"₹",
+  R5:"₹₹", R6:"₹", R7:"₹₹₹", R8:"₹₹",
+  R9:"₹", R10:"₹", R11:"₹",
+  R12:"₹₹", R13:"₹₹", R14:"₹"
+};
+/* ══════════════════════ end of pricing ═══════════════════════ */
+
+// apply pricing map to the architecture table and requirement cards
+document.querySelectorAll('table.arch tbody tr').forEach(tr=>{
+  const k=tr.cells[0].textContent.trim(),c=tr.querySelector('.pr');
+  if(c&&PRICING[k])c.textContent=PRICING[k];
+});
+document.querySelectorAll('.rcard').forEach(card=>{
+  const code=card.querySelector('.code'),b=card.querySelector('.inv b');
+  if(code&&b&&PRICING[code.textContent.trim()])b.textContent=PRICING[code.textContent.trim()];
+});
+const effortTh=document.querySelector('table.arch thead th:last-child');
+if(effortTh)effortTh.textContent=PRICING.LABEL;
+document.querySelectorAll('.rcard .inv').forEach(d=>{
+  if(d.firstChild&&d.firstChild.nodeType===3)d.firstChild.textContent=PRICING.LABEL+' ';
+});
+
 // progress + nav shrink + scrollspy
 const prog=document.getElementById('progress'),nav=document.getElementById('nav');
 const secs=[...document.querySelectorAll('section[id]')];
