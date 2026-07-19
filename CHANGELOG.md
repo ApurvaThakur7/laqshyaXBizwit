@@ -4,9 +4,21 @@ Track every version and what changed. Add a new block at the top for each versio
 
 ---
 
-## v2.0 — 18 Jul 2026 — Pricing & polish
+## v3.0 — 19 Jul 2026 — Scope & effort framing
 
 **Status:** Latest
+
+- **R7 (Proof of Play & Client Portal) is now the only Code-Based module.** R13 Finance MIS changed to Hybrid, R14 HR Automation changed to Low-Code — architecture table rows and requirement card footers updated together.
+- **Fixed pricing removed.** The "Investment" column is now **Relative Effort**, with bands by approach: Low-Code = ₹, Consulting = ₹, Hybrid = ₹₹, Code-Based = ₹₹₹. Same bands on all 14 requirement card footers; the ₹28,00,000 total row is gone.
+
+**Planned next (v4):**
+- Proof-of-work gallery — clicking a Proof card opens its screenshots / recordings in a lightbox (assets pending).
+
+---
+
+## v2.0 — 18 Jul 2026 — Pricing & polish
+
+**Status:** Superseded by v3.0
 
 - Per-module investment added: every requirement card (R1–R14) now shows **Investment ₹2,00,000**.
 - Architecture table gains an **Investment** column and a total row: **₹28,00,000 for 14 modules**.
