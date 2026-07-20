@@ -1,0 +1,35 @@
+name: Sync client site from v3
+
+# Rebuilds docs/ (the published GitHub Pages site) whenever v3 or the proof
+# media changes — including pricing edits made in v3/index.html on GitHub web.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "v3/index.html"
+      - "assets/proof/**"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build client copy of v3
+        run: |
+          mkdir -p docs/assets
+          sed 's#\.\./assets/proof/#assets/proof/#g' v3/index.html > docs/index.html
+          rm -rf docs/assets/proof
+          cp -r assets/proof docs/assets/proof
+          touch docs/.nojekyll
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git diff --cached --quiet || { git commit -m "chore: sync client site from v3"; git push; }
