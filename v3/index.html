@@ -239,15 +239,16 @@ table.arch tr.total td:last-child{font-family:'Archivo';font-weight:900;color:va
 .phases{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
 .phase{border:1px solid var(--line);border-radius:14px;padding:26px;transition:.35s var(--ease);background:var(--surface)}
 .phase:hover{border-color:var(--red);transform:translateY(-5px)}
-.phase .pn{font-family:'Archivo';font-weight:900;font-size:34px;color:var(--surface-2);line-height:1;transition:color .3s}
-.phase:hover .pn{color:var(--red)}
+.phase .pn{font-family:'Archivo';font-weight:900;font-size:34px;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;transition:filter .3s}
+.phase:hover .pn{filter:brightness(1.3)}
 .phase h4{font-size:15px;margin:12px 0 8px}
 .phase p{font-size:13px;color:var(--muted);text-transform:none}
 
 /* commercials */
 .comm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
 .ccard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px}
-.ccard.red{background:var(--red);border-color:var(--red)}
+.ccard.red{background:var(--red);border-color:var(--red);color:#fff}
+.ccard.red h3{color:#fff}
 .ccard h3{font-size:17px;margin-bottom:6px}
 .ccard .sub{font-family:'Archivo';font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--muted);margin-bottom:20px}
 .ccard.red .sub{color:rgba(255,255,255,.8)}
@@ -255,6 +256,21 @@ table.arch tr.total td:last-child{font-family:'Archivo';font-weight:900;color:va
 .ccard ul li{font-size:14px;padding:9px 0 9px 20px;position:relative;border-top:1px solid var(--line);text-transform:none;color:#d0d0d3}
 .ccard.red ul li{border-top-color:rgba(255,255,255,.22);color:#fff}
 .ccard ul li:first-child{border-top:0}
+/* delivery timeline */
+.tline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:44px 0 10px}
+.tline::before{content:"";position:absolute;top:5px;left:0;right:0;height:2px;background:var(--grad);border-radius:2px;opacity:.95}
+.tl-item{position:relative;padding-top:28px}
+.tl-item::before{content:"";position:absolute;top:-4px;left:0;width:12px;height:12px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 5px rgba(237,28,36,.14)}
+.tl-when{font-family:'Archivo';font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.tl-item h4{font-size:15.5px;margin:7px 0 6px}
+.tl-item p{font-size:13px;color:var(--muted);text-transform:none}
+@media(max-width:900px){.tline{grid-template-columns:repeat(2,1fr)}.tline::before{display:none}}
+@media(max-width:640px){.tline{grid-template-columns:1fr}}
+/* table GST note */
+table.arch tr.gst td{background:var(--surface-2);color:var(--muted);font-size:12.5px;text-transform:none;font-family:Inter;text-align:right}
+table.arch tr.gst:hover td{background:var(--surface-2)}
+/* footer legal */
+.legal{max-width:var(--maxw);margin:0 auto;padding:0 28px 36px;font-size:11.5px;line-height:1.7;color:var(--muted-2);text-transform:none;text-align:center}
 .ccard ul li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:2px;background:var(--red)}
 .ccard.red ul li::before{background:#fff}
 .capgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
@@ -470,9 +486,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     <h2 class="h-sec reveal">Four pillars.<br>Fourteen modules.</h2>
     <div class="pillars">
       <div class="pillar reveal"><div class="pl">A</div><div class="tag">Requirement A</div><h3>Knowledge &amp; Enablement</h3><ul><li>R1 Knowledge Base</li><li>R2 BD &amp; Servicing Assistant</li><li>R3 Guardrails Framework</li><li>R4 Enablement Programme</li></ul></div>
-      <div class="pillar reveal d1"><div class="pl">B</div><div class="tag">Requirement B</div><h3>Core Operations</h3><ul><li>R5 Media Inventory Backbone</li><li>R6 Data-Enriched Proposals</li><li>R7 Proof of Play &amp; Portal</li><li>R8 Docs &amp; Invoicing</li></ul></div>
+      <div class="pillar reveal d1"><div class="pl">B</div><div class="tag">Requirement B</div><h3>Core Operations</h3><ul><li>R5 AI Calling &amp; Media Intelligence</li><li>R6 Data-Enriched Proposals</li><li>R7 Proof of Play &amp; Portal</li><li>R8 Invoice Preparation</li></ul></div>
       <div class="pillar reveal d2"><div class="pl">C</div><div class="tag">Requirement C</div><h3>Growth &amp; Creative</h3><ul><li>R9 Creative Suite</li><li>R10 Reports &amp; Competitor Intel</li><li>R11 Lead Generation</li></ul></div>
-      <div class="pillar reveal d3"><div class="pl">D</div><div class="tag">Requirement D</div><h3>Enterprise Expansion</h3><ul><li>R12 Vertical AI Modules</li><li>R13 Finance MIS (future)</li><li>R14 HR Automation (future)</li></ul></div>
+      <div class="pillar reveal d3"><div class="pl">D</div><div class="tag">Requirement D</div><h3>Enterprise Expansion</h3><ul><li>R12 Vertical AI Modules</li><li>R13 Finance MIS (future)</li><li>R14 HR Automation</li></ul></div>
     </div>
   </div>
 </section>
@@ -488,8 +504,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Challenge</span><p class="tx">Three decades of proposals, case studies, SOPs and decks scattered across teams, retrieval is slow.</p>
           <span class="k">Solution</span><p class="tx">A centralised, AI-powered knowledge base with natural-language search and role-based access. One source of truth.</p></div>
         <ul class="deliv"><li>Central AI repository</li><li>Searchable library</li><li>Retrieval assistant</li><li>Role-based access</li></ul>
-        <div class="impl">Low-Code / <b>AI Automation</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="impl">Hybrid: <b>Code + Low-Code</b></div>
+        <div class="inv">Investment <b>₹3,00,000</b></div>
       </div>
       <div class="rcard reveal d1">
         <div class="rt"><span class="code">R2</span><h3>BD &amp; Servicing Assistant</h3>
@@ -497,7 +513,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">An AI assistant across the client lifecycle, generating briefings, first drafts and proposal frameworks.</p></div>
         <ul class="deliv"><li>BD &amp; servicing assistant</li><li>Meeting prep</li><li>Company research</li><li>Proposal &amp; deck drafts</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="inv">Investment <b>₹1,50,000</b></div>
       </div>
       <div class="rcard reveal d2">
         <div class="rt"><span class="code">R3</span><h3>AI Guardrails Framework</h3>
@@ -505,15 +521,15 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">Review and approval workflows before any AI output ships externally. Responsible adoption, maintained standards.</p></div>
         <ul class="deliv"><li>Governance framework</li><li>Approval workflows</li><li>Output validation</li><li>QA workflows</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="inv">Investment <b>₹2,00,000</b></div>
       </div>
       <div class="rcard reveal d3">
         <div class="rt"><span class="code">R4</span><h3>AI Enablement Programme</h3>
           <span class="k">Challenge</span><p class="tx">Varying AI familiarity across teams. Success needs onboarding and change management, not just deployment.</p>
           <span class="k">Solution</span><p class="tx">An org-wide enablement programme, department use cases and best practices for responsible AI use.</p></div>
         <ul class="deliv"><li>Adoption strategy</li><li>Org-wide workshops</li><li>Department training</li><li>Ongoing support</li></ul>
-        <div class="impl">Consulting &amp; <b>Change Mgmt</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="impl">Consulting · <b>4 Sessions</b></div>
+        <div class="inv">Investment <b>₹50,000</b></div>
       </div>
     </div>
   </div>
@@ -526,12 +542,12 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     <p class="lead reveal">Transform media planning, proposals, execution and documentation into a connected, efficient operational ecosystem.</p>
     <div class="rgrid four">
       <div class="rcard reveal">
-        <div class="rt"><span class="code">R5</span><h3>Media Inventory Backbone</h3>
-          <span class="k">Challenge</span><p class="tx">Planning needs coordination across teams, media owners and sources. Manual checks mean long turnarounds.</p>
-          <span class="k">Solution</span><p class="tx">A centralised backbone for Solutions and Assets, fast inventory discovery and AI-assisted planning. Designed to extend your existing SHARP planner.</p></div>
-        <ul class="deliv"><li>Central inventory backbone</li><li>Unified repository</li><li>AI-assisted planning</li><li>Inventory search</li></ul>
+        <div class="rt"><span class="code">R5</span><h3>AI Calling &amp; Media Intelligence</h3>
+          <span class="k">Challenge</span><p class="tx">Every new project needs availability checks across dozens of media owners, coordinated manually over calls, stretching turnarounds.</p>
+          <span class="k">Solution</span><p class="tx">A project enters the system with its inventory and locations; an AI calling agent phones media owners, captures details on the call and builds a structured database, with a clean frontend that ranks the best owners per location (the top 10 of 50, not all 50). Extends your existing SHARP planner.</p></div>
+        <ul class="deliv"><li>AI calling agent</li><li>Media owner database</li><li>Planning frontend</li><li>Best-owner ranking</li></ul>
         <div class="impl">Hybrid: <b>Code + Low-Code</b></div>
-        <div class="inv">Relative Effort <b>₹₹</b></div>
+        <div class="inv">Investment <b>₹5,00,000</b></div>
       </div>
       <div class="rcard reveal d1">
         <div class="rt"><span class="code">R6</span><h3>Data-Enriched Proposals</h3>
@@ -539,7 +555,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">AI-assisted generation with contextual data enrichment, producing structured drafts teams refine before submission.</p></div>
         <ul class="deliv"><li>AI proposal generation</li><li>Drafting assistant</li><li>Data enrichment</li><li>Structured templates</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="inv">Investment <b>₹1,50,000</b></div>
       </div>
       <div class="rcard reveal d2">
         <div class="rt"><span class="code">R7</span><h3>Proof of Play &amp; Portal</h3>
@@ -547,15 +563,15 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">A custom client-facing portal with real-time visibility and centralised proof of play. Separate access for clients, servicing and field.</p></div>
         <ul class="deliv"><li>Client portal (web + mobile)</li><li>Campaign dashboard</li><li>Proof of play mgmt</li><li>Role-based access</li></ul>
         <div class="impl"><b>Code-Based Build</b></div>
-        <div class="inv">Relative Effort <b>₹₹₹</b></div>
+        <div class="inv">Investment <b>₹12,00,000</b></div>
       </div>
       <div class="rcard reveal d3">
-        <div class="rt"><span class="code">R8</span><h3>Documentation &amp; Invoicing</h3>
+        <div class="rt"><span class="code">R8</span><h3>Invoice Preparation</h3>
           <span class="k">Challenge</span><p class="tx">Docs, proof of play and material are manually compiled before invoicing, creating admin overhead.</p>
           <span class="k">Solution</span><p class="tx">Automated workflows that assemble documentation and prepare invoices in a structured flow.</p></div>
         <ul class="deliv"><li>Documentation workflow</li><li>Compilation automation</li><li>Invoice prep</li><li>Process standardisation</li></ul>
-        <div class="impl">Hybrid: <b>Code + Low-Code</b></div>
-        <div class="inv">Relative Effort <b>₹₹</b></div>
+        <div class="impl">Low-Code / <b>AI Automation</b></div>
+        <div class="inv">Investment <b>₹1,80,000</b></div>
       </div>
     </div>
     <div class="note reveal">Only the <b>Proof of Play &amp; Client Portal</b> genuinely needs a code-based build, since large clients touch it directly. The rest ships cost-efficiently through low-code AI automation.</div>
@@ -574,7 +590,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">An AI Creative Suite for early-stage development, accelerating concepts while keeping human review and final approval.</p></div>
         <ul class="deliv"><li>AI creative suite</li><li>Conceptualiser</li><li>Copywriting assist</li><li>Banner concepts</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="inv">Investment <b>₹2,80,000</b></div>
       </div>
       <div class="rcard reveal d1">
         <div class="rt"><span class="code">R10</span><h3>Reports &amp; Competitor Intel</h3>
@@ -582,7 +598,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">An automated system that organises and delivers business intelligence to internal teams and clients, keeping them engaged.</p></div>
         <ul class="deliv"><li>Automated distribution</li><li>Competitor intel workflows</li><li>Industry updates</li><li>Knowledge sharing</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="inv">Investment <b>₹2,20,000</b></div>
       </div>
       <div class="rcard reveal d2">
         <div class="rt"><span class="code">R11</span><h3>AI-Assisted Lead Generation</h3>
@@ -590,7 +606,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">A system supporting prospecting, qualification, contextual outreach and follow-up. Human decision-making stays central.</p></div>
         <ul class="deliv"><li>Lead-gen workflow</li><li>Company research</li><li>Outreach prep</li><li>Follow-up support</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="inv">Investment <b>₹2,20,000</b></div>
       </div>
     </div>
   </div>
@@ -607,8 +623,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Challenge</span><p class="tx">Each vertical has distinct workflows. The core system covers common needs; verticals need tailored automation.</p>
           <span class="k">Solution</span><p class="tx">Dedicated modules per vertical after the core system, each connected to the common ecosystem to avoid fragmentation.</p></div>
         <ul class="deliv"><li>Vertical modules</li><li>Unit workflow automation</li><li>Ecosystem connectivity</li></ul>
-        <div class="impl">Hybrid: <b>Code + Low-Code</b></div>
-        <div class="inv">Relative Effort <b>₹₹</b></div>
+        <div class="impl"><b>Code-Based Build</b></div>
+        <div class="inv">Investment <b>₹5,00,000</b></div>
       </div>
       <div class="rcard reveal d1">
         <div class="rt"><span class="code">R13</span><h3>Finance MIS <span style="font-family:Inter;text-transform:none;color:var(--muted-2);font-size:12px;font-weight:400">· Future</span></h3>
@@ -616,15 +632,15 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
           <span class="k">Solution</span><p class="tx">Evaluate and design finance workflow, reporting and MIS automation in a later phase.</p></div>
         <ul class="deliv"><li>Finance automation roadmap</li><li>Workflow assessment</li></ul>
         <div class="impl">Hybrid: <b>Code + Low-Code</b></div>
-        <div class="inv">Relative Effort <b>₹₹</b></div>
+        <div class="inv">Investment <b>—</b></div>
       </div>
       <div class="rcard reveal d2">
-        <div class="rt"><span class="code">R14</span><h3>HR Automation <span style="font-family:Inter;text-transform:none;color:var(--muted-2);font-size:12px;font-weight:400">· Future</span></h3>
-          <span class="k">Challenge</span><p class="tx">HR operations are a future opportunity, especially repetitive administrative workflows.</p>
-          <span class="k">Solution</span><p class="tx">Assess HR processes and identify AI-assisted automation as part of enterprise-wide expansion.</p></div>
-        <ul class="deliv"><li>HR automation assessment</li><li>Future HR roadmap</li></ul>
+        <div class="rt"><span class="code">R14</span><h3>HR Automation <span style="font-family:Inter;text-transform:none;color:var(--muted-2);font-size:12px;font-weight:400">· Deployed</span></h3>
+          <span class="k">Challenge</span><p class="tx">HR teams spend heavy time screening resumes and running first-round interviews before shortlists reach hiring managers.</p>
+          <span class="k">Solution</span><p class="tx">Two-level HR automation: AI resume screening shortlists candidates, then an AI interview agent conducts structured first-round interviews. Already deployed for other clients, adapted to Laqshya.</p></div>
+        <ul class="deliv"><li>Level 1 · Resume screening</li><li>Level 2 · AI interview agent</li></ul>
         <div class="impl">Low-Code / <b>AI Automation</b></div>
-        <div class="inv">Relative Effort <b>₹</b></div>
+        <div class="inv">Investment <b>₹3,70,000</b></div>
       </div>
     </div>
   </div>
@@ -637,22 +653,23 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     <h2 class="h-sec reveal">Complete architecture</h2>
     <div class="tbl-wrap reveal">
       <table class="arch">
-        <thead><tr><th>Req.</th><th>Solution</th><th>Approach</th><th>Pillar</th><th>Relative Effort</th></tr></thead>
+        <thead><tr><th>Req.</th><th>Solution</th><th>Approach</th><th>Pillar</th><th>Investment</th></tr></thead>
         <tbody>
-          <tr><td>R1</td><td>Institutional Knowledge Base</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td><td class="pr">₹</td></tr>
-          <tr><td>R2</td><td>BD &amp; Servicing Assistant</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td><td class="pr">₹</td></tr>
-          <tr><td>R3</td><td>AI Guardrails Framework</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td><td class="pr">₹</td></tr>
-          <tr><td>R4</td><td>AI Enablement Programme</td><td><span class="tg">Consulting</span></td><td>Knowledge</td><td class="pr">₹</td></tr>
-          <tr><td>R5</td><td>Media Inventory Backbone</td><td><span class="tg">Hybrid</span></td><td>Operations</td><td class="pr">₹₹</td></tr>
-          <tr><td>R6</td><td>Data-Enriched Proposals</td><td><span class="tg">Low-Code</span></td><td>Operations</td><td class="pr">₹</td></tr>
-          <tr><td>R7</td><td>Proof of Play &amp; Client Portal</td><td><span class="tg code">Code-Based</span></td><td>Operations</td><td class="pr">₹₹₹</td></tr>
-          <tr><td>R8</td><td>Documentation &amp; Invoicing</td><td><span class="tg">Hybrid</span></td><td>Operations</td><td class="pr">₹₹</td></tr>
-          <tr><td>R9</td><td>AI Creative Suite &amp; Conceptualiser</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹</td></tr>
-          <tr><td>R10</td><td>Reports &amp; Competitor Intel</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹</td></tr>
-          <tr><td>R11</td><td>AI-Assisted Lead Generation</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹</td></tr>
-          <tr><td>R12</td><td>Vertical-Specific AI Modules</td><td><span class="tg">Hybrid</span></td><td>Enterprise</td><td class="pr">₹₹</td></tr>
-          <tr><td>R13</td><td>Finance MIS (Future)</td><td><span class="tg">Hybrid</span></td><td>Enterprise</td><td class="pr">₹₹</td></tr>
-          <tr><td>R14</td><td>HR Automation (Future)</td><td><span class="tg">Low-Code</span></td><td>Enterprise</td><td class="pr">₹</td></tr>
+          <tr><td>R1</td><td>Institutional Knowledge Base</td><td><span class="tg">Hybrid</span></td><td>Knowledge</td><td class="pr">₹3,00,000</td></tr>
+          <tr><td>R2</td><td>BD &amp; Servicing Assistant</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td><td class="pr">₹1,50,000</td></tr>
+          <tr><td>R3</td><td>AI Guardrails Framework</td><td><span class="tg">Low-Code</span></td><td>Knowledge</td><td class="pr">₹2,00,000</td></tr>
+          <tr><td>R4</td><td>AI Enablement Programme</td><td><span class="tg">Consulting</span></td><td>Knowledge</td><td class="pr">₹50,000</td></tr>
+          <tr><td>R5</td><td>AI Calling &amp; Media Intelligence</td><td><span class="tg">Hybrid</span></td><td>Operations</td><td class="pr">₹5,00,000</td></tr>
+          <tr><td>R6</td><td>Data-Enriched Proposals</td><td><span class="tg">Low-Code</span></td><td>Operations</td><td class="pr">₹1,50,000</td></tr>
+          <tr><td>R7</td><td>Proof of Play &amp; Client Portal</td><td><span class="tg code">Code-Based</span></td><td>Operations</td><td class="pr">₹12,00,000</td></tr>
+          <tr><td>R8</td><td>Invoice Preparation</td><td><span class="tg">Low-Code</span></td><td>Operations</td><td class="pr">₹1,80,000</td></tr>
+          <tr><td>R9</td><td>AI Creative Suite &amp; Conceptualiser</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹2,80,000</td></tr>
+          <tr><td>R10</td><td>Reports &amp; Competitor Intel</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹2,20,000</td></tr>
+          <tr><td>R11</td><td>AI-Assisted Lead Generation</td><td><span class="tg">Low-Code</span></td><td>Growth</td><td class="pr">₹2,20,000</td></tr>
+          <tr><td>R12</td><td>Vertical-Specific AI Modules</td><td><span class="tg code">Code-Based</span></td><td>Enterprise</td><td class="pr">₹5,00,000</td></tr>
+          <tr><td>R13</td><td>Finance MIS (Future)</td><td><span class="tg">Hybrid</span></td><td>Enterprise</td><td class="pr">—</td></tr>
+          <tr><td>R14</td><td>HR Automation</td><td><span class="tg">Low-Code</span></td><td>Enterprise</td><td class="pr">₹3,70,000</td></tr>
+          <tr class="gst"><td colspan="5">All amounts are professional fees, exclusive of GST. R13 Finance MIS is future scope, to be quoted separately.</td></tr>
         </tbody>
       </table>
     </div>
@@ -667,7 +684,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     <p class="lead reveal">Most of Laqshya's requirements map directly to systems Bizwit AI has already deployed for other clients. This is customisation of proven work, not a first attempt.</p>
     <div class="pgrid">
       <div class="pcard reveal"><div class="badge">Deployed</div><h3>Data Enrichment Engine</h3><p>Enriches records with contextual and demographic data at scale, the exact layer proposals need to move past raw recommendations.</p><div class="map">Maps to <b>R6 · Data-Enriched Proposals</b></div></div>
-      <div class="pcard reveal d1"><div class="badge">Deployed</div><h3>Automated Invoicing</h3><p>Pulls documentation together and generates invoices in a structured flow, removing repetitive finance handoffs.</p><div class="map">Maps to <b>R8 · Documentation &amp; Invoicing</b></div></div>
+      <div class="pcard reveal d1"><div class="badge">Deployed</div><h3>Automated Invoicing</h3><p>Pulls documentation together and generates invoices in a structured flow, removing repetitive finance handoffs.</p><div class="map">Maps to <b>R8 · Invoice Preparation</b></div></div>
       <div class="pcard reveal d2"><div class="badge">Deployed</div><h3>LinkedIn &amp; Instagram Outreach</h3><p>Prospecting engines live for 5-6 clients, scaling to 20-30 accounts per flow, around 400 touchpoints a day.</p><div class="map">Maps to <b>R11 · Lead Generation</b></div></div>
       <div class="pcard reveal"><div class="badge">Deployed</div><h3>Competitor Intelligence Agent</h3><p>An always-on radar that monitors competitor and market activity and surfaces intelligence continuously.</p><div class="map">Maps to <b>R10 · Competitor Intel</b></div></div>
       <div class="pcard reveal d1"><div class="badge">Deployed</div><h3>Creative Conceptualiser</h3><p>Built for a design brand to generate on-brand concepts, directly adaptable to banner and campaign concepting.</p><div class="map">Maps to <b>R9 · Creative Suite</b></div></div>
@@ -691,7 +708,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
         <p>Heavy token operations run on low-code workflows; Claude is the agentic reasoning layer on distilled inputs. That structure directly controls AI running costs, the concern raised in discovery.</p>
         <div class="mini">
           <div><div class="n">~80%</div><div class="l">Delivered via low-code</div></div>
-          <div><div class="n">1</div><div class="l">Module that truly needs code</div></div>
+          <div><div class="n">2</div><div class="l">Modules that truly need code</div></div>
           <div><div class="n">~3 mo</div><div class="l">To first rollout</div></div>
         </div>
       </div>
@@ -731,7 +748,13 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
   <div class="wrap">
     <span class="label reveal">Commercials &amp; capability</span>
     <h2 class="h-sec reveal">How the engagement works</h2>
-    <p class="lead reveal">Presented in two components, with operational costs assessed separately by usage. Detailed figures are shared in the commercial round.</p>
+    <p class="lead reveal">From kick-off to a working AI Operating System in <b style="color:#fff">90 days</b> — high-impact modules ship first, value shows early.</p>
+    <div class="tline reveal">
+      <div class="tl-item"><div class="tl-when">Weeks 1–2</div><h4>Discovery &amp; Architecture</h4><p>Workshops, process mapping and the final solution blueprint.</p></div>
+      <div class="tl-item"><div class="tl-when">Month 1</div><h4>First Modules Live</h4><p>Quick low-code wins deployed early — knowledge base, assistants.</p></div>
+      <div class="tl-item"><div class="tl-when">Month 2</div><h4>Core Operations Build</h4><p>Client portal, AI calling system and automation workflows in build.</p></div>
+      <div class="tl-item"><div class="tl-when">Month 3</div><h4>Rollout &amp; Enablement</h4><p>Deployment, training, go-live support — the system is live.</p></div>
+    </div>
     <div class="comm">
       <div class="ccard reveal">
         <h3>Consulting &amp; Solution Design</h3>
@@ -794,6 +817,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     </div>
     <div class="r"><b>AI OPERATING SYSTEM PROPOSAL</b><br>Confidential · Prepared by Bizwit AI · v3.0 · 2026</div>
   </div>
+  <div class="legal">This proposal is prepared exclusively for Laqshya Media Group and is presented solely for its consideration and acceptance. It is confidential, is not a binding offer, and all scope, timelines and commercials remain subject to a definitive agreement between the parties. © 2026 Bizwit AI. All rights reserved.</div>
 </footer>
 
 <script>
@@ -805,11 +829,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
    The page fills these in everywhere automatically.
    ══════════════════════════════════════════════════════════════ */
 const PRICING={
-  LABEL:"Relative Effort",
-  R1:"₹", R2:"₹", R3:"₹", R4:"₹",
-  R5:"₹₹", R6:"₹", R7:"₹₹₹", R8:"₹₹",
-  R9:"₹", R10:"₹", R11:"₹",
-  R12:"₹₹", R13:"₹₹", R14:"₹"
+  LABEL:"Investment",
+  R1:"₹3,00,000", R2:"₹1,50,000", R3:"₹2,00,000", R4:"₹50,000",
+  R5:"₹5,00,000", R6:"₹1,50,000", R7:"₹12,00,000", R8:"₹1,80,000",
+  R9:"₹2,80,000", R10:"₹2,20,000", R11:"₹2,20,000",
+  R12:"₹5,00,000", R13:"—", R14:"₹3,70,000"
 };
 /* ══════════════════════ end of pricing ═══════════════════════ */
 

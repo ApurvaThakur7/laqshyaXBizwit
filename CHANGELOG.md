@@ -16,6 +16,13 @@ Track every version and what changed. Add a new block at the top for each versio
 - **Gradient extended.** Also on the hero word "System", section-heading accent words, hero stat numbers and approach mini-stats.
 - **WhatsApp CTA.** "Book the discovery workshop" (mailto) replaced with "Let's begin →" opening Priyank's WhatsApp chat directly (+91 73764 05488), with the number linked below the button.
 - **Self-serve pricing block.** All ₹ effort bands and the column/card label now come from one clearly-marked `PRICING` block at the top of the page script — editable in one place without touching the rest of the file.
+- **Real module pricing added (excl. GST).** Label is now **Investment**: R1 ₹3L (Hybrid), R2 ₹1.5L, R3 ₹2L, R4 ₹50K (Consulting · 4 sessions, Change Mgmt removed), R5 ₹5L, R6 ₹1.5L, R7 ₹12L, R8 ₹1.8L (Low-Code), R9 ₹2.8L, R10 ₹2.2L, R11 ₹2.2L, R12 ₹5L (Code-Based), R13 not quoted (future), R14 ₹3.7L. GST note added inside the architecture table.
+- **R5 rewritten as AI Calling & Media Intelligence** — AI agent calls media owners, builds the database, frontend ranks the best owners per location. Hybrid build.
+- **R8 renamed Invoice Preparation** (Low-Code); **R12 now Code-Based**; approach mini-stat updated to 2 code modules.
+- **R14 HR Automation is live scope** — two levels (resume screening + AI interview agent), marked Deployed, future tag now only on R13.
+- **90-day delivery timeline** added to "How the engagement works", replacing the two-components line.
+- **Visual fixes:** delivery phase numbers 01–08 now gradient (were invisible dark-on-dark); red commercials card heading now white (was red-on-red).
+- **Legal line** added to the footer: prepared exclusively for Laqshya Media Group, for its consideration and acceptance; not a binding offer.
 
 **Planned next (v4):**
 - Proof-of-work gallery — clicking a Proof card opens its screenshots / recordings in a lightbox (assets pending).
