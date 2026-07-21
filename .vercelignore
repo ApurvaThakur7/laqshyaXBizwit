@@ -1,0 +1,10 @@
+# Client-facing Vercel deploy: publish only the proposal (v1/) and its assets.
+# Internal files stay in the repo but are never uploaded to Vercel.
+/index.html
+CHANGELOG.md
+CLAUDE.md
+README.md
+netlify.toml
+.github
+docs
+bizwit_logo.avif
